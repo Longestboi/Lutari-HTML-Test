@@ -8,177 +8,123 @@ lutaritalisman {
 
     background-image: url(1.svg);
     background-size: 100% 100%;
-    width: 488.100px;
-    height: 490.500px;
+    width: 100%;
+    aspect-ratio: 1 / 1.004917025199754;
 }
 
 beadgroup {
     display: block;
     position: absolute;
 
-    width: 85.700px;
-    height: 82.900px;
+    width: 17.55787748412211%;
+    height: 16.90112130479103%;
 }
 
 beadgroup[data-group="1"] {
-    left: 132.090px;
-    top: 56.151px;
+    left: 27.06207744314690%;
+    top: 11.44770642201835%;
 }
-
-beadgroup[data-group="1"] > bead[data-type="ranaka"] {
-    background-image: url("blue_beads/ranaka.svg");
-}
-
-beadgroup[data-group="1"] > bead[data-type="matu"] {
-    background-image: url("blue_beads/matu.svg");
-}
-
-beadgroup[data-group="1"] > bead[data-type="oranu"] {
-    background-image: url("blue_beads/oranu.svg");
-}
-beadgroup[data-group="1"] > bead[data-type="tongi"] {
-    background-image: url("blue_beads/tongi.svg");
-}
-
-beadgroup[data-group="1"] > bead[data-type="urapa"] {
-    background-image: url("blue_beads/urapa.svg");
-}
-
 
 beadgroup[data-group="2"] {
-    left: 227.440px;
-    top: 55.393px;
-}
-
-beadgroup[data-group="2"] > bead[data-type="ranaka"] {
-    background-image: url("yellow_beads/ranaka.svg");
-}
-
-beadgroup[data-group="2"] > bead[data-type="matu"] {
-    background-image: url("yellow_beads/matu.svg");
-}
-
-beadgroup[data-group="2"] > bead[data-type="oranu"] {
-    background-image: url("yellow_beads/oranu.svg");
-}
-beadgroup[data-group="2"] > bead[data-type="tongi"] {
-    background-image: url("yellow_beads/tongi.svg");
-}
-
-beadgroup[data-group="2"] > bead[data-type="urapa"] {
-    background-image: url("yellow_beads/urapa.svg");
+    left: 46.59700880967015%;
+    top: 11.29317023445464%;
 }
 
 beadgroup[data-group="3"] {
-    left: 128.790px;
-    top: 152.500px;
-}
-
-beadgroup[data-group="3"] > bead[data-type="ranaka"] {
-    background-image: url("red_beads/ranaka.svg");
-}
-
-beadgroup[data-group="3"] > bead[data-type="matu"] {
-    background-image: url("red_beads/matu.svg");
-}
-
-beadgroup[data-group="3"] > bead[data-type="oranu"] {
-    background-image: url("red_beads/oranu.svg");
-}
-
-beadgroup[data-group="3"] > bead[data-type="tongi"] {
-    background-image: url("red_beads/tongi.svg");
-}
-
-beadgroup[data-group="3"] > bead[data-type="urapa"] {
-    background-image: url("red_beads/urapa.svg");
+    left: 26.38598647818070%;
+    top: 31.09072375127421%;
 }
 
 beadgroup[data-group="4"] {
-    left: 225.191px;
-    top: 154.151px;
+    left: 46.13624257324319%;
+    top: 31.42731906218145%;
 }
 
-beadgroup[data-group="4"] > bead[data-type="ranaka"] {
-    background-image: url("green_beads/ranaka.svg");
+beadgroup[data-group="1"] > bead[data-type="ranaka"] { background-image: url("blue_beads/ranaka.svg"); }
+beadgroup[data-group="1"] > bead[data-type="matu"] { background-image: url("blue_beads/matu.svg"); }
+beadgroup[data-group="1"] > bead[data-type="oranu"] { background-image: url("blue_beads/oranu.svg"); }
+beadgroup[data-group="1"] > bead[data-type="tongi"] { background-image: url("blue_beads/tongi.svg"); }
+beadgroup[data-group="1"] > bead[data-type="urapa"] { background-image: url("blue_beads/urapa.svg"); }
+
+beadgroup[data-group="2"] > bead[data-type="ranaka"] { background-image: url("yellow_beads/ranaka.svg"); }
+beadgroup[data-group="2"] > bead[data-type="matu"] { background-image: url("yellow_beads/matu.svg"); }
+beadgroup[data-group="2"] > bead[data-type="oranu"] { background-image: url("yellow_beads/oranu.svg"); }
+beadgroup[data-group="2"] > bead[data-type="tongi"] { background-image: url("yellow_beads/tongi.svg"); }
+beadgroup[data-group="2"] > bead[data-type="urapa"] { background-image: url("yellow_beads/urapa.svg");}
+
+beadgroup[data-group="3"] > bead[data-type="ranaka"] { background-image: url("red_beads/ranaka.svg"); }
+beadgroup[data-group="3"] > bead[data-type="matu"] { background-image: url("red_beads/matu.svg"); }
+beadgroup[data-group="3"] > bead[data-type="oranu"] { background-image: url("red_beads/oranu.svg"); }
+beadgroup[data-group="3"] > bead[data-type="tongi"] { background-image: url("red_beads/tongi.svg"); }
+beadgroup[data-group="3"] > bead[data-type="urapa"] { background-image: url("red_beads/urapa.svg"); }
+
+beadgroup[data-group="4"] > bead[data-type="ranaka"] { background-image: url("green_beads/ranaka.svg"); }
+beadgroup[data-group="4"] > bead[data-type="matu"] { background-image: url("green_beads/matu.svg"); }
+beadgroup[data-group="4"] > bead[data-type="oranu"] { background-image: url("green_beads/oranu.svg"); }
+beadgroup[data-group="4"] > bead[data-type="tongi"] { background-image: url("green_beads/tongi.svg"); }
+beadgroup[data-group="4"] > bead[data-type="urapa"] { background-image: url("green_beads/urapa.svg"); }
+
+bead {
+    --bead-width: 37.33955659276546%;
+    --bead-height: 38.60072376357057%;
+    display: block;
+    position: absolute;
+    background-size: 100% 100%;
+    width: var(--bead-width);
+    height: var(--bead-height);
 }
 
-beadgroup[data-group="4"] > bead[data-type="matu"] {
-    background-image: url("green_beads/matu.svg");
+bead[data-type="tongi"] {
+    --x-off: calc(var(--bead-width) * 0.703125);
+    --y-off: calc(var(--bead-height) * 0.3890625);
 }
 
-beadgroup[data-group="4"] > bead[data-type="oranu"] {
-    background-image: url("green_beads/oranu.svg");
+bead[data-type="matu"] {
+    --x-off: calc(var(--bead-width) * 0.50625);
+    --y-off: calc(var(--bead-height) * 0.5046875);
 }
 
-beadgroup[data-group="4"] > bead[data-type="tongi"] {
-    background-image: url("green_beads/tongi.svg");
+bead[data-type="oranu"] {
+    --x-off: calc(var(--bead-width) * 0.484375);
+    --y-off: calc(var(--bead-height) * 0.484375);
 }
 
-beadgroup[data-group="4"] > bead[data-type="urapa"] {
-    background-image: url("green_beads/urapa.svg");
+bead[data-type="ranaka"] {
+    --x-off: calc(var(--bead-width) * 0.5);
+    --y-off: calc(var(--bead-height) * 0.5);
+}
+
+bead[data-type="urapa"] {
+    --x-off: calc(var(--bead-width) * 0.315625);
+    --y-off: calc(var(--bead-height) * 0.365625);
 }
 
 bead[data-pos="1"]{
-    --x: 14.200px;
-    --y: 11.350px;
+    --x: 16.56942823803967%;
+    --y: 13.69119420989144%;
 }
 
 bead[data-pos="2"]{
-    --x: 74.350px;
-    --y: 12.050px;
+    --x: 86.75612602100350%;
+    --y: 14.53558504221954%;
 }
 
 bead[data-pos="3"]{
-    --x: 43.050px;
-    --y: 41.750px;
+    --x: 50.23337222870478%;
+    --y: 50.36188178528347%;
 }
 
 bead[data-pos="4"]{
-    --x: 11.350px;
-    --y: 71.550px;
+    --x: 13.24387397899650%;
+    --y: 86.30880579010856%;
 }
 
 bead[data-pos="5"]{
-    --x: 67.850px;
-    --y: 71.450px;
+    --x: 79.17152858809802%;
+    --y: 86.18817852834741%;
 }
 
 bead[data-pos] {
     left: calc(var(--x) - var(--x-off));
     top: calc(var(--y) - var(--y-off));
-}
-
-bead {
-    display: block;
-    position: absolute;
-    background-size: 100% 100%;
-    width: 32px;
-    height: 32px;
-}
-
-bead[data-type="tongi"] {
-    --x-off: 22.50px;
-    --y-off: 12.45px;
-}
-
-
-bead[data-type="matu"] {
-    --x-off: 16.20px;
-    --y-off: 16.15px;
-}
-
-bead[data-type="oranu"] {
-    --x-off: 15.50px;
-    --y-off: 15.50px;
-}
-
-bead[data-type="ranaka"] {
-    --x-off: 16px;
-    --y-off: 16px;
-}
-
-bead[data-type="urapa"] {
-    --x-off: 10.10px;
-    --y-off: 11.70px;
 }
