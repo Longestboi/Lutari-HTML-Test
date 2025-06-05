@@ -1,3 +1,38 @@
+
+html {
+    /* Blue Beads */
+    --blue-bead-1: url("blue_beads/ranaka.svg");
+    --blue-bead-2: url("blue_beads/matu.svg");
+    --blue-bead-3: url("blue_beads/oranu.svg");
+    --blue-bead-4: url("blue_beads/tongi.svg");
+    --blue-bead-5: url("blue_beads/urapa.svg");
+    
+    /* Yellow Beads */
+    --yellow-bead-1: url("yellow_beads/ranaka.svg");
+    --yellow-bead-2: url("yellow_beads/matu.svg");
+    --yellow-bead-3: url("yellow_beads/oranu.svg");
+    --yellow-bead-4: url("yellow_beads/tongi.svg");
+    --yellow-bead-5: url("yellow_beads/urapa.svg");
+    
+    /* Red Beads */
+    --red-bead-1: url("red_beads/ranaka.svg");
+    --red-bead-2: url("red_beads/matu.svg");
+    --red-bead-3: url("red_beads/oranu.svg");
+    --red-bead-4: url("red_beads/tongi.svg");
+    --red-bead-5: url("red_beads/urapa.svg");
+    
+    /* Green Beads */
+    --green-bead-1: url("green_beads/ranaka.svg");
+    --green-bead-2: url("green_beads/matu.svg");
+    --green-bead-3: url("green_beads/oranu.svg");
+    --green-bead-4: url("green_beads/tongi.svg");
+    --green-bead-5: url("green_beads/urapa.svg");
+}
+
+.img-488w {
+    max-width: 488.1px;
+}
+
 lutaritalisman > img {
     position: absolute;
 }
@@ -40,29 +75,29 @@ beadgroup[data-group="4"] {
     top: 31.42731906218145%;
 }
 
-beadgroup[data-group="1"] > bead[data-type="ranaka"] { background-image: url("blue_beads/ranaka.svg"); }
-beadgroup[data-group="1"] > bead[data-type="matu"] { background-image: url("blue_beads/matu.svg"); }
-beadgroup[data-group="1"] > bead[data-type="oranu"] { background-image: url("blue_beads/oranu.svg"); }
-beadgroup[data-group="1"] > bead[data-type="tongi"] { background-image: url("blue_beads/tongi.svg"); }
-beadgroup[data-group="1"] > bead[data-type="urapa"] { background-image: url("blue_beads/urapa.svg"); }
+beadgroup[data-group="1"] > bead[data-type="ranaka"] { background-image: var(--blue-bead-1) }
+beadgroup[data-group="1"] > bead[data-type="matu"] { background-image: var(--blue-bead-2) }
+beadgroup[data-group="1"] > bead[data-type="oranu"] { background-image: var(--blue-bead-3) }
+beadgroup[data-group="1"] > bead[data-type="tongi"] { background-image: var(--blue-bead-4) }
+beadgroup[data-group="1"] > bead[data-type="urapa"] { background-image: var(--blue-bead-5) }
 
-beadgroup[data-group="2"] > bead[data-type="ranaka"] { background-image: url("yellow_beads/ranaka.svg"); }
-beadgroup[data-group="2"] > bead[data-type="matu"] { background-image: url("yellow_beads/matu.svg"); }
-beadgroup[data-group="2"] > bead[data-type="oranu"] { background-image: url("yellow_beads/oranu.svg"); }
-beadgroup[data-group="2"] > bead[data-type="tongi"] { background-image: url("yellow_beads/tongi.svg"); }
-beadgroup[data-group="2"] > bead[data-type="urapa"] { background-image: url("yellow_beads/urapa.svg");}
+beadgroup[data-group="2"] > bead[data-type="ranaka"] { background-image: var(--yellow-bead-1) }
+beadgroup[data-group="2"] > bead[data-type="matu"] { background-image: var(--yellow-bead-2) }
+beadgroup[data-group="2"] > bead[data-type="oranu"] { background-image: var(--yellow-bead-3) }
+beadgroup[data-group="2"] > bead[data-type="tongi"] { background-image: var(--yellow-bead-4) }
+beadgroup[data-group="2"] > bead[data-type="urapa"] { background-image: var(--yellow-bead-5);}
 
-beadgroup[data-group="3"] > bead[data-type="ranaka"] { background-image: url("red_beads/ranaka.svg"); }
-beadgroup[data-group="3"] > bead[data-type="matu"] { background-image: url("red_beads/matu.svg"); }
-beadgroup[data-group="3"] > bead[data-type="oranu"] { background-image: url("red_beads/oranu.svg"); }
-beadgroup[data-group="3"] > bead[data-type="tongi"] { background-image: url("red_beads/tongi.svg"); }
-beadgroup[data-group="3"] > bead[data-type="urapa"] { background-image: url("red_beads/urapa.svg"); }
+beadgroup[data-group="3"] > bead[data-type="ranaka"] { background-image: var(--red-bead-1) }
+beadgroup[data-group="3"] > bead[data-type="matu"] { background-image: var(--red-bead-2) }
+beadgroup[data-group="3"] > bead[data-type="oranu"] { background-image: var(--red-bead-3) }
+beadgroup[data-group="3"] > bead[data-type="tongi"] { background-image: var(--red-bead-4) }
+beadgroup[data-group="3"] > bead[data-type="urapa"] { background-image: var(--red-bead-5) }
 
-beadgroup[data-group="4"] > bead[data-type="ranaka"] { background-image: url("green_beads/ranaka.svg"); }
-beadgroup[data-group="4"] > bead[data-type="matu"] { background-image: url("green_beads/matu.svg"); }
-beadgroup[data-group="4"] > bead[data-type="oranu"] { background-image: url("green_beads/oranu.svg"); }
-beadgroup[data-group="4"] > bead[data-type="tongi"] { background-image: url("green_beads/tongi.svg"); }
-beadgroup[data-group="4"] > bead[data-type="urapa"] { background-image: url("green_beads/urapa.svg"); }
+beadgroup[data-group="4"] > bead[data-type="ranaka"] { background-image: var(--green-bead-1) }
+beadgroup[data-group="4"] > bead[data-type="matu"] { background-image: var(--green-bead-2) }
+beadgroup[data-group="4"] > bead[data-type="oranu"] { background-image: var(--green-bead-3) }
+beadgroup[data-group="4"] > bead[data-type="tongi"] { background-image: var(--green-bead-4) }
+beadgroup[data-group="4"] > bead[data-type="urapa"] { background-image: var(--green-bead-5) }
 
 bead {
     --bead-width: 37.33955659276546%;

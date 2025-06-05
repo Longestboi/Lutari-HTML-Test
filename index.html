@@ -1,49 +1,313 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <title>Lutari Talisman Test</title>
-    <link rel="stylesheet" href="talisman.css">
-  </head>
-  <body>
-    <header></header>
-    <main>
-    <div style="width: 488.100px;">
-      <LutariTalisman>
-        <beadgroup data-group=1>
-          <bead data-pos=1 data-type="none"></bead>
-          <bead data-pos=2 data-type="none"></bead>
-          <bead data-pos=3 data-type="none"></bead>
-          <bead data-pos=4 data-type="none"></bead>
-          <bead data-pos=5 data-type="none"></bead>
-        </beadgroup>
-        <beadgroup data-group=2>
-          <bead data-pos=1 data-type="none"></bead>
-          <bead data-pos=2 data-type="none"></bead>
-          <bead data-pos=3 data-type="none"></bead>
-          <bead data-pos=4 data-type="none"></bead>
-          <bead data-pos=5 data-type="none"></bead>
-        </beadgroup>
-        <beadgroup data-group=3>
-          <bead data-pos=1 data-type="none"></bead>
-          <bead data-pos=2 data-type="none"></bead>
-          <bead data-pos=3 data-type="none"></bead>
-          <bead data-pos=4 data-type="none"></bead>
-          <bead data-pos=5 data-type="none"></bead>
-        </beadgroup>
-        <beadgroup data-group=4>
-          <bead data-pos=1 data-type="none"></bead>
-          <bead data-pos=2 data-type="none"></bead>
-          <bead data-pos=3 data-type="none"></bead>
-          <bead data-pos=4 data-type="none"></bead>
-          <bead data-pos=5 data-type="none"></bead>
-        </beadgroup>
-      </LutariTalisman>
-    </div>
-    </main>
-    <script src="index.js">
+    <head>
+        <meta charset="utf-8" />
+        <title>Lutari Talisman Test</title>
+        <link rel="stylesheet" href="talisman.css" />
+        <link rel="stylesheet" href="index.css" />
+    </head>
 
-    </script>
-    <footer></footer>
-  </body>
+    <body>
+        <header></header>
+        <main>
+            <div class="main-container">
+                <div class="box" id="talisman">
+                    <div class="box-head">Lutari Talisman</div>
+                    <div class="box-content">
+                        <lutaritalisman>
+                            <beadgroup data-group="1">
+                                <bead data-pos="1" data-type="matu"></bead>
+                                <bead data-pos="2" data-type="tongi"></bead>
+                                <bead data-pos="3" data-type="ranaka"></bead>
+                                <bead data-pos="4" data-type="none"></bead>
+                                <bead data-pos="5" data-type="none"></bead>
+                            </beadgroup>
+                            <beadgroup data-group="2">
+                                <bead data-pos="1" data-type="none"></bead>
+                                <bead data-pos="2" data-type="none"></bead>
+                                <bead data-pos="3" data-type="none"></bead>
+                                <bead data-pos="4" data-type="none"></bead>
+                                <bead data-pos="5" data-type="urapa"></bead>
+                            </beadgroup>
+                            <beadgroup data-group="3">
+                                <bead data-pos="1" data-type="none"></bead>
+                                <bead data-pos="2" data-type="none"></bead>
+                                <bead data-pos="3" data-type="ranaka"></bead>
+                                <bead data-pos="4" data-type="none"></bead>
+                                <bead data-pos="5" data-type="none"></bead>
+                            </beadgroup>
+                            <beadgroup data-group="4">
+                                <bead data-pos="1" data-type="matu"></bead>
+                                <bead data-pos="2" data-type="none"></bead>
+                                <bead data-pos="3" data-type="none"></bead>
+                                <bead data-pos="4" data-type="oranu"></bead>
+                                <bead data-pos="5" data-type="urapa"></bead>
+                            </beadgroup>
+                        </lutaritalisman>
+                    </div>
+                    <div class="box-footer"></div>
+                </div>
+                <div class="box" id="controls">
+                    <div class="box-head">Controls</div>
+                    <div class="box-content">
+                        <div id="controls-container">
+                            <div id="blue-controls">
+                                <div class="title">Blue</div>
+                                <div class="controls">
+                                    <div>
+                                        <image-selector position="1" default="0">
+                                            <selection name="none"></selection>
+                                            <selection name="tongi" img="blue_beads/tongi.svg"></selection>
+                                            <selection name="oranu" img="blue_beads/oranu.svg"></selection>
+                                            <selection name="ranaka" img="blue_beads/ranaka.svg"></selection>
+                                            <selection name="matu" img="blue_beads/matu.svg"></selection>
+                                            <selection name="urapa" img="blue_beads/urapa.svg"></selection>
+                                        </image-selector>
+                                        <image-selector position="2" default="0">
+                                            <selection name="none"></selection>
+                                            <selection name="tongi" img="blue_beads/tongi.svg"></selection>
+                                            <selection name="oranu" img="blue_beads/oranu.svg"></selection>
+                                            <selection name="ranaka" img="blue_beads/ranaka.svg"></selection>
+                                            <selection name="matu" img="blue_beads/matu.svg"></selection>
+                                            <selection name="urapa" img="blue_beads/urapa.svg"></selection>
+                                        </image-selector>
+                                    </div>
+                                    <div>
+                                        <image-selector position="3" default="0">
+                                            <<selection name="none"></selection>
+                                            <selection name="tongi" img="blue_beads/tongi.svg"></selection>
+                                            <selection name="oranu" img="blue_beads/oranu.svg"></selection>
+                                            <selection name="ranaka" img="blue_beads/ranaka.svg"></selection>
+                                            <selection name="matu" img="blue_beads/matu.svg"></selection>
+                                            <selection name="urapa" img="blue_beads/urapa.svg"></selection>
+                                        </image-selector>
+                                    </div>
+                                    <div>
+                                        <image-selector position="4" default="0">
+                                            <<selection name="none"></selection>
+                                            <selection name="tongi" img="blue_beads/tongi.svg"></selection>
+                                            <selection name="oranu" img="blue_beads/oranu.svg"></selection>
+                                            <selection name="ranaka" img="blue_beads/ranaka.svg"></selection>
+                                            <selection name="matu" img="blue_beads/matu.svg"></selection>
+                                            <selection name="urapa" img="blue_beads/urapa.svg"></selection>
+                                        </image-selector>
+                                        <image-selector position="5" default="0">
+                                            <selection name="none"></selection>
+                                            <selection name="tongi" img="blue_beads/tongi.svg"></selection>
+                                            <selection name="oranu" img="blue_beads/oranu.svg"></selection>
+                                            <selection name="ranaka" img="blue_beads/ranaka.svg"></selection>
+                                            <selection name="matu" img="blue_beads/matu.svg"></selection>
+                                            <selection name="urapa" img="blue_beads/urapa.svg"></selection>
+                                        </image-selector>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vertical-bar"></div>
+                            <div id="yellow-controls">
+                                <div class="title">Yellow</div>
+                                <div class="controls">
+                                    <div>
+                                        <image-selector position="1" default="0">
+                                            <selection name="none"></selection>
+                                            <selection name="tongi" img="yellow_beads/tongi.svg"></selection>
+                                            <selection name="oranu" img="yellow_beads/oranu.svg"></selection>
+                                            <selection name="ranaka" img="yellow_beads/ranaka.svg"></selection>
+                                            <selection name="matu" img="yellow_beads/matu.svg"></selection>
+                                            <selection name="urapa" img="yellow_beads/urapa.svg"></selection>
+                                        </image-selector>
+                                        <image-selector position="2" default="0">
+                                            <selection name="none"></selection>
+                                            <selection name="tongi" img="yellow_beads/tongi.svg"></selection>
+                                            <selection name="oranu" img="yellow_beads/oranu.svg"></selection>
+                                            <selection name="ranaka" img="yellow_beads/ranaka.svg"></selection>
+                                            <selection name="matu" img="yellow_beads/matu.svg"></selection>
+                                            <selection name="urapa" img="yellow_beads/urapa.svg"></selection>
+                                        </image-selector>
+                                    </div>
+                                    <div>
+                                        <image-selector position="3" default="0">
+                                            <selection name="none"></selection>
+                                            <selection name="tongi" img="yellow_beads/tongi.svg"></selection>
+                                            <selection name="oranu" img="yellow_beads/oranu.svg"></selection>
+                                            <selection name="ranaka" img="yellow_beads/ranaka.svg"></selection>
+                                            <selection name="matu" img="yellow_beads/matu.svg"></selection>
+                                            <selection name="urapa" img="yellow_beads/urapa.svg"></selection>
+                                        </image-selector>
+                                    </div>
+                                    <div>
+                                        <image-selector position="4" default="0">
+                                            <selection name="none"></selection>
+                                            <selection name="tongi" img="yellow_beads/tongi.svg"></selection>
+                                            <selection name="oranu" img="yellow_beads/oranu.svg"></selection>
+                                            <selection name="ranaka" img="yellow_beads/ranaka.svg"></selection>
+                                            <selection name="matu" img="yellow_beads/matu.svg"></selection>
+                                            <selection name="urapa" img="yellow_beads/urapa.svg"></selection>
+                                        </image-selector>
+                                        <image-selector position="5" default="0">
+                                            <selection name="none"></selection>
+                                            <selection name="tongi" img="yellow_beads/tongi.svg"></selection>
+                                            <selection name="oranu" img="yellow_beads/oranu.svg"></selection>
+                                            <selection name="ranaka" img="yellow_beads/ranaka.svg"></selection>
+                                            <selection name="matu" img="yellow_beads/matu.svg"></selection>
+                                            <selection name="urapa" img="yellow_beads/urapa.svg"></selection>
+                                        </image-selector>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="horizontal-bar"></div>
+                        <div id="controls-container">
+                            <div id="red-controls">
+                                <div class="title">Red</div>
+                                <div class="controls">
+                                    <div>
+                                        <image-selector position="1" default="0">
+                                            <selection name="none"></selection>
+                                            <selection name="tongi" img="red_beads/tongi.svg"></selection>
+                                            <selection name="oranu" img="red_beads/oranu.svg"></selection>
+                                            <selection name="ranaka" img="red_beads/ranaka.svg"></selection>
+                                            <selection name="matu" img="red_beads/matu.svg"></selection>
+                                            <selection name="urapa" img="red_beads/urapa.svg"></selection>
+                                        </image-selector>
+                                        <image-selector position="2" default="0">
+                                            <selection name="none"></selection>
+                                            <selection name="tongi" img="red_beads/tongi.svg"></selection>
+                                            <selection name="oranu" img="red_beads/oranu.svg"></selection>
+                                            <selection name="ranaka" img="red_beads/ranaka.svg"></selection>
+                                            <selection name="matu" img="red_beads/matu.svg"></selection>
+                                            <selection name="urapa" img="red_beads/urapa.svg"></selection>
+                                        </image-selector>
+                                    </div>
+                                    <div>
+                                        <image-selector position="3" default="0">
+                                            <selection name="none"></selection>
+                                            <selection name="tongi" img="red_beads/tongi.svg"></selection>
+                                            <selection name="oranu" img="red_beads/oranu.svg"></selection>
+                                            <selection name="ranaka" img="red_beads/ranaka.svg"></selection>
+                                            <selection name="matu" img="red_beads/matu.svg"></selection>
+                                            <selection name="urapa" img="red_beads/urapa.svg"></selection>
+                                        </image-selector>
+                                    </div>
+                                    <div>
+                                        <image-selector position="4" default="0">
+                                            <selection name="none"></selection>
+                                            <selection name="tongi" img="red_beads/tongi.svg"></selection>
+                                            <selection name="oranu" img="red_beads/oranu.svg"></selection>
+                                            <selection name="ranaka" img="red_beads/ranaka.svg"></selection>
+                                            <selection name="matu" img="red_beads/matu.svg"></selection>
+                                            <selection name="urapa" img="red_beads/urapa.svg"></selection>
+                                        </image-selector>
+                                        <image-selector position="5" default="0">
+                                            <selection name="none"></selection>
+                                            <selection name="tongi" img="red_beads/tongi.svg"></selection>
+                                            <selection name="oranu" img="red_beads/oranu.svg"></selection>
+                                            <selection name="ranaka" img="red_beads/ranaka.svg"></selection>
+                                            <selection name="matu" img="red_beads/matu.svg"></selection>
+                                            <selection name="urapa" img="red_beads/urapa.svg"></selection>
+                                        </image-selector>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vertical-bar"></div>
+                            <div id="green-controls">
+                                <div class="title">Green</div>
+                                <div class="controls">
+                                    <div>
+                                        <image-selector position="1" default="0">
+                                            <selection name="none"></selection>
+                                            <selection name="tongi" img="green_beads/tongi.svg"></selection>
+                                            <selection name="oranu" img="green_beads/oranu.svg"></selection>
+                                            <selection name="ranaka" img="green_beads/ranaka.svg"></selection>
+                                            <selection name="matu" img="green_beads/matu.svg"></selection>
+                                            <selection name="urapa" img="green_beads/urapa.svg"></selection>
+                                        </image-selector>
+                                        <image-selector position="2" default="0">
+                                            <selection name="none"></selection>
+                                            <selection name="tongi" img="green_beads/tongi.svg"></selection>
+                                            <selection name="oranu" img="green_beads/oranu.svg"></selection>
+                                            <selection name="ranaka" img="green_beads/ranaka.svg"></selection>
+                                            <selection name="matu" img="green_beads/matu.svg"></selection>
+                                            <selection name="urapa" img="green_beads/urapa.svg"></selection>
+                                        </image-selector>
+                                    </div>
+                                    <div>
+                                        <image-selector position="3" default="0">
+                                            <selection name="none"></selection>
+                                            <selection name="tongi" img="green_beads/tongi.svg"></selection>
+                                            <selection name="oranu" img="green_beads/oranu.svg"></selection>
+                                            <selection name="ranaka" img="green_beads/ranaka.svg"></selection>
+                                            <selection name="matu" img="green_beads/matu.svg"></selection>
+                                            <selection name="urapa" img="green_beads/urapa.svg"></selection>
+                                        </image-selector>
+                                    </div>
+                                    <div>
+                                        <image-selector position="4" default="0">
+                                            <selection name="none"></selection>
+                                            <selection name="tongi" img="green_beads/tongi.svg"></selection>
+                                            <selection name="oranu" img="green_beads/oranu.svg"></selection>
+                                            <selection name="ranaka" img="green_beads/ranaka.svg"></selection>
+                                            <selection name="matu" img="green_beads/matu.svg"></selection>
+                                            <selection name="urapa" img="green_beads/urapa.svg"></selection>
+                                        </image-selector>
+                                        <image-selector position="5" default="0">
+                                            <selection name="none"></selection>
+                                            <selection name="tongi" img="green_beads/tongi.svg"></selection>
+                                            <selection name="oranu" img="green_beads/oranu.svg"></selection>
+                                            <selection name="ranaka" img="green_beads/ranaka.svg"></selection>
+                                            <selection name="matu" img="green_beads/matu.svg"></selection>
+                                            <selection name="urapa" img="green_beads/urapa.svg"></selection>
+                                        </image-selector>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-footer"></div>
+                </div>
+            </div>
+            <script src="talisman.js"></script>
+            <script src="index.js" defer></script>
+            <script>
+              // All the selction boxes
+              let selectors = {
+                "blue": [...document.getElementById("blue-controls").getElementsByTagName("image-selector")],
+                "yellow": [...document.getElementById("yellow-controls").getElementsByTagName("image-selector")],
+                "red": [...document.getElementById("red-controls").getElementsByTagName("image-selector")],
+                "green": [...document.getElementById("green-controls").getElementsByTagName("image-selector")]
+              };
+
+              // Create all selection-changed event listeners programatically
+              for (const [k, v] of Object.entries(selectors)) {
+                for (let selector of v.sort((a, b) => { return a.getAttribute("position") > b.getAttribute("position") } )) {
+                  let table = {};
+                  
+                  selector.addEventListener("selection-changed", (x) => {
+                    table[k] = [{ pos: parseInt(x.target.getAttribute("position")), type: parseInt(x.target.selected) }];
+                    parse_bead_table(table);
+                  })
+                }
+              }
+              
+              // man in the middle (hook) to set the selectors to the same exact starting positions as the talisman
+              function parse_bead_table_mitm(table) {
+                for (const [k, v] of Object.entries(table)) {
+                 for (const o of v) {
+                    let elem = selectors[k].find((x) => { return x.getAttribute("position") == o.pos } );
+                    elem.setAttribute("selected", o.type);
+                  }
+                }
+
+                parse_bead_table(table, false);
+              }
+            
+              parse_bead_table_mitm({
+                  "blue": [{pos: 1, type:4}, {pos: 2, type:1}, {pos: 3, type:3}],
+                  "green": [{pos: 1, type:4}, {pos: 4, type:2}, {pos: 5, type:5}],
+                  "red": [{pos: 3, type: 3 }],
+                  "yellow": [{pos: 5, type: 5}]
+              });
+            </script>
+        </main>
+        <footer></footer>
+    </body>
 </html>

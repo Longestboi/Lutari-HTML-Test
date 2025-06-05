@@ -1,0 +1,212 @@
+@font-face {
+    font-family: "Cafeteria";
+    src: url("assets/cafeteria-5.woff") format("woff");
+}
+
+* {
+    --seperator-color: grey;
+    --image-button-width: 1em;
+}
+
+html,
+body,
+main {
+    height: 100%;
+}
+
+html {
+    font-family: "Cafeteria", sans-serif;
+    font-size: 2em;
+    background-image: url("assets/out-temp.webp");
+    background-size: cover;
+}
+
+body {
+    margin: unset;
+    backdrop-filter: blur(5px);
+}
+
+main {
+    display: flex;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    gap: 1em;
+    padding: 1em;
+    flex-grow: 1;
+}
+
+@media (orientation: portrait) {
+    .main-container {
+        flex-direction: column;
+    }
+}
+
+#talisman.box {
+    width: 18em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    border-radius: 34.5px;
+    overflow: hidden;
+}
+
+.box > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    flex-basis: 100%;
+}
+
+.box > .box-content {
+    background-color: white;
+    overflow: hidden;
+}
+
+.box > .box-head,
+.box > .box-footer {
+    background-color: #fed23e;
+    flex-shrink: 0;
+    max-height: 1.5em;
+}
+
+#talisman.box > .box-content {
+    padding: 1em;
+}
+
+#controls.box {
+    flex-grow: 1;
+}
+
+#controls.box > div.box-content {
+    flex-direction: column;
+}
+
+#controls.box > div.box-content > div#controls-container {
+    display: flex;
+    flex-basis: 100%;
+    width: 90%;
+    /* background-color: blue; */
+    align-content: center;
+    margin: 0.5em;
+}
+
+#controls.box
+    > div.box-content
+    > div#controls-container
+    > div[id*="-controls"] {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#controls.box
+    > div.box-content
+    > div#controls-container
+    > div[id*="-controls"]
+    > .title {
+    font-size: 1.5em;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+#controls.box
+    > div.box-content
+    > div#controls-container
+    > div[id*="-controls"]
+    > .controls {
+    /* flex-basis: 100%; */
+    align-content: center;
+    aspect-ratio: 1 / 1;
+}
+
+#controls.box
+    > div.box-content
+    > div#controls-container
+    > div[id*="-controls"]
+    > .controls
+    > div {
+    display: flex;
+    justify-content: center;
+}
+
+#controls.box
+    > div.box-content
+    > div#controls-container
+    > div[id*="-controls"]
+    > .controls
+    > div:nth-child(odd) {
+        justify-content: space-between;
+}
+
+#controls.box
+    > div.box-content
+    > div#controls-container
+    > div[id*="-controls"]
+    > .controls
+    > div
+    > image-selector {
+    margin: .1em;
+}
+
+#controls.box
+    > div.box-content
+    > div#controls-container
+    > div#blue-controls
+    > .title {
+    color: #6699ff;
+}
+
+#controls.box
+    > div.box-content
+    > div#controls-container
+    > div#yellow-controls
+    > .title {
+    color: #ffff00;
+}
+
+#controls.box
+    > div.box-content
+    > div#controls-container
+    > div#red-controls
+    > .title {
+    color: #ff3300;
+}
+
+#controls.box
+    > div.box-content
+    > div#controls-container
+    > div#green-controls
+    > .title {
+    color: #51e100;
+}
+
+.horizontal-bar {
+    width: 90%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: var(--seperator-color);
+    flex-basis: auto;
+}
+
+.vertical-bar {
+    height: 100%;
+    width: 5px;
+    border-radius: 5px;
+    background-color: var(--seperator-color);
+    flex-basis: auto;
+}
