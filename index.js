@@ -1,5 +1,5 @@
 class ImageSelector extends HTMLElement {
-  static observedAttributes = ["default", "selected"];
+  static observedAttributes = ["default", "selected", "dropdown-above"];
   constructor() {
     super();
 
@@ -9,6 +9,8 @@ class ImageSelector extends HTMLElement {
     this.current_selection_int = this.attributes["selected"]
       ? this.attributes["selected"].nodeValue
       : this.default_selection_int;
+
+    this.drowdown_above = this.attributes["dropdown-above"] ? true : false;
 
     this.initialized = false;
     this.attachShadow({ mode: "open" });
@@ -36,6 +38,14 @@ class ImageSelector extends HTMLElement {
       case "selected":
         this.current_selection_int = newValue < this.getOptions().length ? newValue : oldValue;
         break;
+      case "dropdown-above":
+        if (oldValue === null) {
+          this.drowdown_above = true;
+        }
+
+        if (newValue === null) {
+          this.drowdown_above = false;
+        }
     }
     if (this.initialized) this.rerender();
   }
@@ -52,6 +62,12 @@ class ImageSelector extends HTMLElement {
       bkg_image = `url(${bkg_image})`;
     } else {
       bkg_image = "none";
+    }
+
+    if (this.drowdown_above) {
+      this.wrapper.style.setProperty("--dropdown-direction", "wrap-reverse");
+    } else {
+      this.wrapper.style.setProperty("--dropdown-direction", "wrap");
     }
 
     this.image_displayer
@@ -82,12 +98,17 @@ class ImageSelector extends HTMLElement {
           --displayer-image: url();
 
           --show-dropdown: none;
+
+          --dropdown-direction: wrap;
         }
 
         div#wrapper {
           width: 100%;
           height: 100%;
           aspect-ratio: 1 / 1;
+
+          display: flex;
+          flex-wrap: var(--dropdown-direction);
         }
 
         .image_displayer {
@@ -109,7 +130,6 @@ class ImageSelector extends HTMLElement {
 
         div#dropdown.image-selector-dropdown {
           box-sizing: border-box;
-          position: absolute;
           background-color: white;
           border: 1px solid grey;
           border-radius: 5px;
@@ -151,6 +171,7 @@ class ImageSelector extends HTMLElement {
 
       this.shadowRoot.adoptedStyleSheets = [style_sheet];
 
+      this.wrapper = this.shadowRoot.getElementById("wrapper");
       this.image_displayer = this.shadowRoot.getElementById("image");
       this.dropdown = this.shadowRoot.getElementById("dropdown");
 
