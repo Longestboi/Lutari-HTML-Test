@@ -264,7 +264,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="box-footer"></div>
+                    <div class="box-footer"><div class="button" onclick="parse_bead_table_mitm({}, true)">Clear All Beads</div></div>
                 </div>
             </div>
             <script src="talisman.js"></script>
@@ -291,7 +291,16 @@
               }
               
               // man in the middle (hook) to set the selectors to the same exact starting positions as the talisman
-              function parse_bead_table_mitm(table) {
+              function parse_bead_table_mitm(table, clear) {
+
+                if (clear === true) {
+                    for (const [k, v] of Object.entries(selectors)) {
+                        for (let selector of v.sort((a, b) => { return a.getAttribute("position") > b.getAttribute("position") } )) {
+                            selector.selected = 0;
+                        }
+                    }
+                }
+
                 for (const [k, v] of Object.entries(table)) {
                  for (const o of v) {
                     let elem = selectors[k].find((x) => { return x.getAttribute("position") == o.pos } );
@@ -299,7 +308,7 @@
                   }
                 }
 
-                parse_bead_table(table, false);
+                parse_bead_table(table, clear);
               }
             
               parse_bead_table_mitm({

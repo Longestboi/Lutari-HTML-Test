@@ -246,3 +246,25 @@ main {
     background-color: var(--seperator-color);
     flex-basis: auto;
 }
+
+
+.button {
+    font-size: 1em;
+    box-sizing: border-box;
+    user-select: none;
+    background-color: #3bc92e;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: .5em;
+    overflow: hidden;
+    padding-left: .5em;
+    padding-right: .5em;
+}
+
+.button:hover {
+    background-color: #37ef26;
+}
+
+.button:active {
+    background-color: #2b8a27;
+}
