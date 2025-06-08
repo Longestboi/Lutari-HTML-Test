@@ -102,6 +102,10 @@ main {
     max-height: 1.5em;
 }
 
+.box > .box-footer {
+    display: flex;
+    gap: 1em;
+}
 
 #controls.box {
     flex-basis: 100%
@@ -248,23 +252,37 @@ main {
 }
 
 
+.green-button {
+    background-color: #3bc92e;
+}
+
+.green-button:hover {
+    background-color: #37ef26;
+}
+
+.green-button:active {
+    background-color: #2b8a27;
+}
+
+.red-button {
+    background-color: #f0311e;
+}
+
+.red-button:hover {
+    background-color: #ff3721;
+}
+
+.red-button:active {
+    background-color: #ac2f1d;
+}
+
 .button {
     font-size: 1em;
     box-sizing: border-box;
     user-select: none;
-    background-color: #3bc92e;
     border: 2px solid black;
     border-radius: 15px;
-    margin: .5em;
     overflow: hidden;
     padding-left: .5em;
     padding-right: .5em;
-}
-
-.button:hover {
-    background-color: #37ef26;
-}
-
-.button:active {
-    background-color: #2b8a27;
 }

@@ -264,12 +264,22 @@
                             </div>
                         </div>
                     </div>
-                    <div class="box-footer"><div class="button" onclick="parse_bead_table_mitm({}, true)">Clear All Beads</div></div>
+                    <div class="box-footer">
+                        <div class="button green-button" onclick="parse_bead_table_mitm(all_beads, true)">Set All Beads</div>
+                        <div class="button red-button" onclick="parse_bead_table_mitm({}, true)">Clear All Beads</div>
+                    </div>
                 </div>
             </div>
             <script src="talisman.js"></script>
             <script src="index.js" defer></script>
             <script>
+              const all_beads = {
+                  "blue": [{pos: 1, type:4}, {pos: 2, type:1}, {pos: 3, type:3}, {pos: 4, type:2}, {pos: 5, type:5}],
+                  "green": [{pos: 1, type:4}, {pos: 2, type:1}, {pos: 3, type:3}, {pos: 4, type:2}, {pos: 5, type:5}],
+                  "red": [{pos: 1, type:4}, {pos: 2, type:1}, {pos: 3, type:3}, {pos: 4, type:2}, {pos: 5, type:5}],
+                  "yellow": [{pos: 1, type:4}, {pos: 2, type:1}, {pos: 3, type:3}, {pos: 4, type:2}, {pos: 5, type:5}]
+              }
+
               // All the selction boxes
               let selectors = {
                 "blue": [...document.getElementById("blue-controls").getElementsByTagName("image-selector")],
