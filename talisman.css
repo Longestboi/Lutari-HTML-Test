@@ -33,14 +33,9 @@ html {
     max-width: 488.1px;
 }
 
-lutaritalisman > img {
-    position: absolute;
-}
-
 lutaritalisman {
     display: block;
     position: relative;
-
     background-image: url(talisman.svg);
     background-size: 100% 100%;
     width: 100%;

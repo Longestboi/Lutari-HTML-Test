@@ -34,8 +34,7 @@ class ImageSelector extends HTMLElement {
   attributeChangedCallback(name, oldValue, newValue) {
     switch (name) {
       case "selected":
-        this.current_selection_int =
-          newValue < this.getOptions().length ? newValue : oldValue;
+        this.current_selection_int = newValue < this.getOptions().length ? newValue : oldValue;
         break;
     }
     if (this.initialized) this.rerender();
@@ -75,8 +74,9 @@ class ImageSelector extends HTMLElement {
       const style_sheet = new CSSStyleSheet();
       style_sheet.replaceSync(`
         :host {
-          --image-width: 32px;
-          --image-height: 32px;
+          position: relative;
+          --image-width: 100%;
+          --image-height: 100%;
 
           --margin: .1em;
           --displayer-image: url();
@@ -84,27 +84,54 @@ class ImageSelector extends HTMLElement {
           --show-dropdown: none;
         }
 
+        div#wrapper {
+          width: 100%;
+          height: 100%;
+          aspect-ratio: 1 / 1;
+        }
+
         .image_displayer {
-          width: var(--image-width);
-          height: var(--image-height);
+          box-sizing: border-box;
+          width: 100%;
+          height: 100%;
           background-size: 100% 100%;
-          margin: var(--margin);
           background-image: var(--displayer-image);
         }
 
         .image-selector-displayer {
+          box-sizing: border-box;
+          width: 100%;
+          height: 100%;
+          padding: var(--margin);
           border: 1px solid grey;
           border-radius: 5px;
         }
 
         div#dropdown.image-selector-dropdown {
+          box-sizing: border-box;
           position: absolute;
           background-color: white;
           border: 1px solid grey;
           border-radius: 5px;
           height: calc((var(--image-height) + (var(--margin) * 1.5)) * 2);
+          width: inherit;
+          padding-left: var(--margin);
+          padding-right: var(--margin);
           overflow: scroll;
           display: var(--show-dropdown);
+          z-index: 1000;
+        }
+
+        div#dropdown.image-selector-dropdown div.image_displayer {
+          box-sizing: border-box;
+          height: unset;
+          width: 100%;
+          aspect-ratio: 1 / 1;
+        }
+
+        div#dropdown.image-selector-dropdown div.image_displayer {
+          margin-top: var(--margin);
+          margin-bottom: var(--margin);
         }
 
         div#dropdown.image-selector-dropdown div.image_displayer:hover,
@@ -115,7 +142,7 @@ class ImageSelector extends HTMLElement {
       `);
 
       const wrapper = `
-        <div>
+        <div id="wrapper">
           <div id="image" class="image-selector-displayer" onclick="this.getRootNode().host.open()"><div class="image_displayer"></div></div>
           <div id="dropdown" class="image-selector-dropdown"></div>
         </div>
@@ -154,7 +181,6 @@ class ImageSelector extends HTMLElement {
     this.rerender();
   }
 
-  updateTalisman() {}
 }
 
 customElements.define("image-selector", ImageSelector);

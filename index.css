@@ -38,6 +38,7 @@ main {
     gap: 1em;
     padding: 1em;
     flex-grow: 1;
+    box-sizing: border-box;
 }
 
 @media (orientation: portrait) {
@@ -47,9 +48,29 @@ main {
 }
 
 #talisman.box {
-    width: 18em;
+    flex-basis: 100%;
+    justify-content: center;
+}
+
+#talisman.box > .box-content > .talisman-container {
+    height: 100%;
+    max-width: 100%;
+    width: 100%;
+}
+
+#talisman.box > .box-content >.talisman-container > lutaritalisman {
     margin-left: auto;
     margin-right: auto;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+@media (orientation: portrait) {
+    #talisman.box {
+        flex-basis: 100%
+    }
 }
 
 .box {
@@ -57,6 +78,7 @@ main {
     flex-direction: column;
     border-radius: 34.5px;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .box > * {
@@ -68,6 +90,7 @@ main {
 }
 
 .box > .box-content {
+    box-sizing: content-box;
     background-color: white;
     overflow: hidden;
 }
@@ -79,12 +102,22 @@ main {
     max-height: 1.5em;
 }
 
-#talisman.box > .box-content {
-    padding: 1em;
-}
 
 #controls.box {
-    flex-grow: 1;
+    flex-basis: 100%
+    aspect-ratio: 1/1 !important;
+}
+
+@media (orientation: landscape) {
+    #controls.box {
+        min-width: 100vh;
+    }
+}
+
+@media (orientation: portrait) {
+    #controls.box {
+        min-height: 100vw;
+    }
 }
 
 #controls.box > div.box-content {
@@ -132,6 +165,7 @@ main {
     /* flex-basis: 100%; */
     align-content: center;
     aspect-ratio: 1 / 1;
+    height: 75%;
 }
 
 #controls.box
@@ -142,6 +176,7 @@ main {
     > div {
     display: flex;
     justify-content: center;
+    height: 33.33%;
 }
 
 #controls.box
@@ -160,7 +195,8 @@ main {
     > .controls
     > div
     > image-selector {
-    margin: .1em;
+    height: 100%;
+    aspect-ratio: 1 / 1;
 }
 
 #controls.box
